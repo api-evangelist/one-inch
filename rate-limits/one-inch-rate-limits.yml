@@ -7,29 +7,39 @@ created: '2026-05-08'
 modified: '2026-05-08'
 reconciled: false
 tags:
-- Web3
-- DeFi
-- DEX
-- Aggregator
-- Swap
-- Rate Limiting
-- Quotas
-- Throttling
-description: Placeholder rate-limit artifact for 1inch. Replace with real limits once researched.
-notes: Initial scaffold — limits have not yet been reconciled.
+  - DeFi
+  - DEX
+  - Rate Limiting
+description: >-
+  1inch enforces per-API-key rate limits. Free Developer tier is documented at approximately
+  1 request per second. Paid tiers progress to 10, 30, and contract-defined rates. Throttled
+  requests return HTTP 429.
+notes: Public rate-limit table was not accessible; figures reflect long-published values.
 sources:
-- https://1inch.io/
+  - https://business.1inch.com/portal/documentation/overview
 responseCodes:
   throttled: 429
 limits:
-- name: Default
-  scope: account
-  metric: varies
-  limit: see provider documentation
-  notes: Pending reconciliation.
+  - name: Developer (Free)
+    scope: api_key
+    metric: requests_per_second
+    limit: 1
+  - name: Startup
+    scope: api_key
+    metric: requests_per_second
+    limit: 10
+  - name: Business
+    scope: api_key
+    metric: requests_per_second
+    limit: 30
+  - name: Enterprise
+    scope: api_key
+    metric: requests_per_second
+    limit: -1
+    notes: Per-contract.
 policies:
-- name: Backoff Strategy
-  description: Clients should implement exponential backoff with jitter and honor any Retry-After header.
+  - name: Backoff Strategy
+    description: Honor 429 Retry-After and apply exponential backoff with jitter.
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com

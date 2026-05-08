@@ -2,8 +2,6 @@ aid: one-inch
 url: https://raw.githubusercontent.com/api-evangelist/one-inch/refs/heads/main/apis.yml
 name: 1inch
 x-type: company
-description: >-
-  1inch is the leading DEX aggregator. APIs cover Swap, Fusion, Limit Orders, Spot Price, History, Balances, Token info, and Web3 RPC across 12+ EVM chains.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Web3
@@ -11,13 +9,156 @@ tags:
   - DEX
   - Aggregator
   - Swap
+  - Multi-chain
+  - Limit Orders
+  - Fusion
+  - Cross-chain
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
-apis: []
+description: >-
+  1inch is the leading DEX aggregator. The 1inch Developer Portal exposes 13+ APIs covering
+  Swap (classic, Fusion intent, cross-chain), Orderbook, Balance, Spot Price, Token, Token
+  Details, Portfolio, Gas Price, NFT, Traces, History, Transaction Gateway, Web3 RPC, Charts,
+  and Domains. APIs serve 12+ EVM chains. Authentication via Authorization Bearer header.
+apis:
+  - aid: one-inch:swap-api
+    name: 1inch Swap API
+    tags:
+      - Swap
+      - Aggregator
+      - Fusion
+      - Cross-chain
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.1inch.dev/swap/v6.0
+    humanURL: https://business.1inch.com/portal/documentation/swap-api
+    description: Quote and swap endpoints supporting classic aggregation, Fusion intent-based swaps, and cross-chain (Fusion+).
+    properties:
+      - type: Documentation
+        url: https://business.1inch.com/portal/documentation/swap-api
+    x-features:
+      - Classic aggregation across 600+ liquidity sources
+      - Fusion intent-based swaps (gas-free)
+      - Cross-chain Fusion+
+    x-use-cases:
+      - DeFi wallet swap UI
+      - Bot-driven aggregator routes
+  - aid: one-inch:orderbook-api
+    name: 1inch Orderbook API
+    tags:
+      - Limit Orders
+      - Orderbook
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.1inch.dev/orderbook/v4.0
+    humanURL: https://business.1inch.com/portal/documentation/orderbook-api
+    description: Limit-order placement, query, fill, and cancellation endpoints.
+    properties:
+      - type: Documentation
+        url: https://business.1inch.com/portal/documentation/orderbook-api
+    x-features:
+      - Place / query / cancel limit orders
+      - On-chain settlement
+    x-use-cases:
+      - Limit-order DEX UI
+      - Algorithmic bots
+  - aid: one-inch:balance-api
+    name: 1inch Balance API
+    tags:
+      - Balances
+      - Wallet
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.1inch.dev/balance/v1.2
+    humanURL: https://business.1inch.com/portal/documentation/balance-api
+    description: Wallet balance lookup across supported EVM chains.
+    properties:
+      - type: Documentation
+        url: https://business.1inch.com/portal/documentation/balance-api
+    x-features:
+      - Multi-chain balance queries
+      - Token allowances
+    x-use-cases:
+      - Wallet UIs
+      - Pre-swap allowance checks
+  - aid: one-inch:spot-price-api
+    name: 1inch Spot Price API
+    tags:
+      - Prices
+      - Spot
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.1inch.dev/price/v1.1
+    humanURL: https://business.1inch.com/portal/documentation/spot-price-api
+    description: On-chain spot price feeds for tokens across supported EVM chains.
+    properties:
+      - type: Documentation
+        url: https://business.1inch.com/portal/documentation/spot-price-api
+    x-features:
+      - On-chain TWAP-aware prices
+      - Multi-chain
+    x-use-cases:
+      - Pricing widgets
+      - Risk monitoring
+  - aid: one-inch:token-api
+    name: 1inch Token API
+    tags:
+      - Tokens
+      - Metadata
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.1inch.dev/token/v1.2
+    humanURL: https://business.1inch.com/portal/documentation/token-api
+    description: Token metadata and discovery endpoints.
+    properties:
+      - type: Documentation
+        url: https://business.1inch.com/portal/documentation/token-api
+    x-features:
+      - Symbol / decimals / logo metadata
+      - Search
+    x-use-cases:
+      - Token pickers
+      - Wallet token resolvers
+  - aid: one-inch:portfolio-api
+    name: 1inch Portfolio API
+    tags:
+      - Portfolio
+      - Wallet
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.1inch.dev/portfolio/portfolio/v4
+    humanURL: https://business.1inch.com/portal/documentation/portfolio-api
+    description: Portfolio composition, P&L, and historical valuation across supported networks.
+    properties:
+      - type: Documentation
+        url: https://business.1inch.com/portal/documentation/portfolio-api
+    x-features:
+      - Cross-chain portfolio
+      - P&L and historical NAV
+    x-use-cases:
+      - Portfolio dashboards
+      - Tax reporting
+  - aid: one-inch:gas-price-api
+    name: 1inch Gas Price API
+    tags:
+      - Gas
+      - Estimation
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://api.1inch.dev/gas-price/v1.5
+    humanURL: https://business.1inch.com/portal/documentation/gas-price-api
+    description: Gas price estimates for EIP-1559 across supported EVM chains.
+    properties:
+      - type: Documentation
+        url: https://business.1inch.com/portal/documentation/gas-price-api
+    x-features:
+      - EIP-1559 fee data
+      - Multi-chain
+    x-use-cases:
+      - Wallet gas-fee preview
 common:
-  - type: Website
-    url: https://1inch.io/
+  - type: Portal
+    url: https://business.1inch.com/
+  - type: Documentation
+    url: https://business.1inch.com/portal/documentation/overview
+  - type: Pricing
+    url: https://business.1inch.com/pricing
+  - type: GitHub
+    url: https://github.com/1inch
   - type: Plans
     url: plans/one-inch-plans-pricing.yml
   - type: RateLimits
