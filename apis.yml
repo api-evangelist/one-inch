@@ -1,0 +1,29 @@
+aid: one-inch
+url: https://raw.githubusercontent.com/api-evangelist/one-inch/refs/heads/main/apis.yml
+name: 1inch
+x-type: company
+description: >-
+  1inch is the leading DEX aggregator. APIs cover Swap, Fusion, Limit Orders, Spot Price, History, Balances, Token info, and Web3 RPC across 12+ EVM chains.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Web3
+  - DeFi
+  - DEX
+  - Aggregator
+  - Swap
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://1inch.io/
+  - type: Plans
+    url: plans/one-inch-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/one-inch-rate-limits.yml
+  - type: FinOps
+    url: finops/one-inch-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
