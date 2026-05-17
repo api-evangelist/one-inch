@@ -1,7 +1,7 @@
 aid: one-inch
 url: https://raw.githubusercontent.com/api-evangelist/one-inch/refs/heads/main/apis.yml
 name: 1inch
-x-type: company
+kind: company
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - Web3
