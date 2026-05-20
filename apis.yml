@@ -151,6 +151,8 @@ apis:
     x-use-cases:
       - Wallet gas-fee preview
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/1inch
   - type: Portal
     url: https://business.1inch.com/
   - type: Documentation
