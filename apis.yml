@@ -167,6 +167,8 @@ common:
     url: rate-limits/one-inch-rate-limits.yml
   - type: FinOps
     url: finops/one-inch-finops.yml
+  - type: LLMsTxt
+    url: https://1inch.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
