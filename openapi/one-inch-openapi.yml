@@ -1,0 +1,294 @@
+openapi: 3.1.0
+info:
+  title: 1inch Developer Portal APIs
+  description: |
+    1inch exposes a suite of REST APIs through its Developer / Business
+    portal (https://business.1inch.com/portal/documentation/overview).
+    This OpenAPI document covers the most commonly used products surfaced
+    in the 1inch apis.yml profile: Swap (classic aggregation), Orderbook
+    (limit orders), Balance, Spot Price, Token, Portfolio, and Gas Price.
+    All endpoints are versioned under their own subpath on
+    `https://api.1inch.dev` and authenticate with a Bearer token issued
+    from the developer portal.
+  version: "1.0.0"
+  contact:
+    name: 1inch
+    url: https://business.1inch.com/portal/documentation/overview
+servers:
+  - url: https://api.1inch.dev
+    description: 1inch Developer API gateway
+security:
+  - BearerAuth: []
+tags:
+  - name: Swap
+  - name: Orderbook
+  - name: Balance
+  - name: SpotPrice
+  - name: Token
+  - name: Portfolio
+  - name: GasPrice
+paths:
+  /swap/v6.0/{chain}/healthcheck:
+    get:
+      tags: [Swap]
+      summary: Swap API health check
+      parameters:
+        - $ref: '#/components/parameters/Chain'
+      responses:
+        "200":
+          description: API healthy
+  /swap/v6.0/{chain}/quote:
+    get:
+      tags: [Swap]
+      summary: Get a swap quote
+      description: Returns the best aggregated quote for a token swap on the given EVM chain.
+      parameters:
+        - $ref: '#/components/parameters/Chain'
+        - in: query
+          name: src
+          required: true
+          schema:
+            type: string
+          description: Source token address
+        - in: query
+          name: dst
+          required: true
+          schema:
+            type: string
+          description: Destination token address
+        - in: query
+          name: amount
+          required: true
+          schema:
+            type: string
+          description: Source amount in minor units (wei)
+        - in: query
+          name: includeTokensInfo
+          schema:
+            type: boolean
+        - in: query
+          name: includeProtocols
+          schema:
+            type: boolean
+        - in: query
+          name: includeGas
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: Quote
+  /swap/v6.0/{chain}/swap:
+    get:
+      tags: [Swap]
+      summary: Build a swap transaction
+      parameters:
+        - $ref: '#/components/parameters/Chain'
+        - in: query
+          name: src
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: dst
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: amount
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: from
+          required: true
+          schema:
+            type: string
+          description: Wallet address that will execute the swap
+        - in: query
+          name: slippage
+          required: true
+          schema:
+            type: number
+          description: Slippage tolerance in percent (e.g. 1 = 1%)
+        - in: query
+          name: disableEstimate
+          schema:
+            type: boolean
+        - in: query
+          name: allowPartialFill
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: Swap transaction calldata
+  /swap/v6.0/{chain}/approve/spender:
+    get:
+      tags: [Swap]
+      summary: Get aggregator spender address
+      parameters:
+        - $ref: '#/components/parameters/Chain'
+      responses:
+        "200":
+          description: Spender address
+  /swap/v6.0/{chain}/approve/transaction:
+    get:
+      tags: [Swap]
+      summary: Build an approve transaction
+      parameters:
+        - $ref: '#/components/parameters/Chain'
+        - in: query
+          name: tokenAddress
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: amount
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Approve transaction calldata
+  /swap/v6.0/{chain}/approve/allowance:
+    get:
+      tags: [Swap]
+      summary: Get current token allowance
+      parameters:
+        - $ref: '#/components/parameters/Chain'
+        - in: query
+          name: tokenAddress
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: walletAddress
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Allowance amount
+  /swap/v6.0/{chain}/liquidity-sources:
+    get:
+      tags: [Swap]
+      summary: List supported liquidity sources (protocols)
+      parameters:
+        - $ref: '#/components/parameters/Chain'
+      responses:
+        "200":
+          description: Liquidity sources
+  /swap/v6.0/{chain}/tokens:
+    get:
+      tags: [Swap]
+      summary: List supported tokens for swapping
+      parameters:
+        - $ref: '#/components/parameters/Chain'
+      responses:
+        "200":
+          description: Tokens
+  /orderbook/v4.0/{chain}/order:
+    post:
+      tags: [Orderbook]
+      summary: Submit a limit order
+      parameters:
+        - $ref: '#/components/parameters/Chain'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        "201":
+          description: Order submitted
+  /orderbook/v4.0/{chain}/orders:
+    get:
+      tags: [Orderbook]
+      summary: List limit orders
+      parameters:
+        - $ref: '#/components/parameters/Chain'
+        - in: query
+          name: page
+          schema:
+            type: integer
+        - in: query
+          name: limit
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Orders
+  /balance/v1.2/{chain}/balances/{walletAddress}:
+    get:
+      tags: [Balance]
+      summary: Get wallet token balances
+      parameters:
+        - $ref: '#/components/parameters/Chain'
+        - in: path
+          name: walletAddress
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Balances keyed by token address
+  /price/v1.1/{chain}:
+    get:
+      tags: [SpotPrice]
+      summary: Get spot prices for multiple tokens on a chain
+      parameters:
+        - $ref: '#/components/parameters/Chain'
+      responses:
+        "200":
+          description: Token prices
+  /token/v1.2/{chain}:
+    get:
+      tags: [Token]
+      summary: List tokens with metadata for a chain
+      parameters:
+        - $ref: '#/components/parameters/Chain'
+      responses:
+        "200":
+          description: Tokens with metadata
+  /portfolio/portfolio/v4/general/current_value:
+    get:
+      tags: [Portfolio]
+      summary: Get current portfolio value across chains
+      parameters:
+        - in: query
+          name: addresses
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+          style: form
+          explode: true
+      responses:
+        "200":
+          description: Current portfolio value
+  /gas-price/v1.5/{chain}:
+    get:
+      tags: [GasPrice]
+      summary: Get EIP-1559 gas price estimates
+      parameters:
+        - $ref: '#/components/parameters/Chain'
+      responses:
+        "200":
+          description: Gas price tiers
+components:
+  parameters:
+    Chain:
+      in: path
+      name: chain
+      required: true
+      schema:
+        type: integer
+      description: EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: |
+        API key issued from https://portal.1inch.dev passed as
+        `Authorization: Bearer <token>`.
