@@ -1,0 +1,465 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "1inch Developer Portal APIs",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Swap",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Swap API health check",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/swap/v6.0/:chain/healthcheck",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              }
+            ]
+          },
+          "docs": "Swap API health check"
+        },
+        {
+          "info": {
+            "name": "Get a swap quote",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/swap/v6.0/:chain/quote",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              },
+              {
+                "name": "src",
+                "value": "",
+                "type": "query",
+                "description": "Source token address"
+              },
+              {
+                "name": "dst",
+                "value": "",
+                "type": "query",
+                "description": "Destination token address"
+              },
+              {
+                "name": "amount",
+                "value": "",
+                "type": "query",
+                "description": "Source amount in minor units (wei)"
+              },
+              {
+                "name": "includeTokensInfo",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "includeProtocols",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "includeGas",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns the best aggregated quote for a token swap on the given EVM chain."
+        },
+        {
+          "info": {
+            "name": "Build a swap transaction",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/swap/v6.0/:chain/swap",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              },
+              {
+                "name": "src",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "dst",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "amount",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "from",
+                "value": "",
+                "type": "query",
+                "description": "Wallet address that will execute the swap"
+              },
+              {
+                "name": "slippage",
+                "value": "",
+                "type": "query",
+                "description": "Slippage tolerance in percent (e.g. 1 = 1%)"
+              },
+              {
+                "name": "disableEstimate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "allowPartialFill",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Build a swap transaction"
+        },
+        {
+          "info": {
+            "name": "Get aggregator spender address",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/swap/v6.0/:chain/approve/spender",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              }
+            ]
+          },
+          "docs": "Get aggregator spender address"
+        },
+        {
+          "info": {
+            "name": "Build an approve transaction",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/swap/v6.0/:chain/approve/transaction",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              },
+              {
+                "name": "tokenAddress",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "amount",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Build an approve transaction"
+        },
+        {
+          "info": {
+            "name": "Get current token allowance",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/swap/v6.0/:chain/approve/allowance",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              },
+              {
+                "name": "tokenAddress",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "walletAddress",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get current token allowance"
+        },
+        {
+          "info": {
+            "name": "List supported liquidity sources (protocols)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/swap/v6.0/:chain/liquidity-sources",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              }
+            ]
+          },
+          "docs": "List supported liquidity sources (protocols)"
+        },
+        {
+          "info": {
+            "name": "List supported tokens for swapping",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/swap/v6.0/:chain/tokens",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              }
+            ]
+          },
+          "docs": "List supported tokens for swapping"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Orderbook",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Submit a limit order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.1inch.dev/orderbook/v4.0/:chain/order",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submit a limit order"
+        },
+        {
+          "info": {
+            "name": "List limit orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/orderbook/v4.0/:chain/orders",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List limit orders"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Balance",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get wallet token balances",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/balance/v1.2/:chain/balances/:walletAddress",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              },
+              {
+                "name": "walletAddress",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get wallet token balances"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "SpotPrice",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get spot prices for multiple tokens on a chain",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/price/v1.1/:chain",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              }
+            ]
+          },
+          "docs": "Get spot prices for multiple tokens on a chain"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Token",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tokens with metadata for a chain",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/token/v1.2/:chain",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              }
+            ]
+          },
+          "docs": "List tokens with metadata for a chain"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Portfolio",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get current portfolio value across chains",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/portfolio/portfolio/v4/general/current_value",
+            "params": [
+              {
+                "name": "addresses",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get current portfolio value across chains"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "GasPrice",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get EIP-1559 gas price estimates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/gas-price/v1.5/:chain",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              }
+            ]
+          },
+          "docs": "Get EIP-1559 gas price estimates"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
