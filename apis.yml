@@ -2,7 +2,7 @@ aid: one-inch
 url: https://raw.githubusercontent.com/api-evangelist/one-inch/refs/heads/main/apis.yml
 name: 1inch
 kind: company
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Web3
   - DeFi
@@ -29,7 +29,7 @@ apis:
       - Aggregator
       - Fusion
       - Cross-chain
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.1inch.dev/swap/v6.0
     humanURL: https://business.1inch.com/portal/documentation/swap-api
     description: Quote and swap endpoints supporting classic aggregation, Fusion intent-based swaps, and cross-chain (Fusion+).
@@ -48,7 +48,7 @@ apis:
     tags:
       - Limit Orders
       - Orderbook
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.1inch.dev/orderbook/v4.0
     humanURL: https://business.1inch.com/portal/documentation/orderbook-api
     description: Limit-order placement, query, fill, and cancellation endpoints.
@@ -66,7 +66,7 @@ apis:
     tags:
       - Balances
       - Wallet
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.1inch.dev/balance/v1.2
     humanURL: https://business.1inch.com/portal/documentation/balance-api
     description: Wallet balance lookup across supported EVM chains.
@@ -84,7 +84,7 @@ apis:
     tags:
       - Prices
       - Spot
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.1inch.dev/price/v1.1
     humanURL: https://business.1inch.com/portal/documentation/spot-price-api
     description: On-chain spot price feeds for tokens across supported EVM chains.
@@ -102,7 +102,7 @@ apis:
     tags:
       - Tokens
       - Metadata
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.1inch.dev/token/v1.2
     humanURL: https://business.1inch.com/portal/documentation/token-api
     description: Token metadata and discovery endpoints.
@@ -120,7 +120,7 @@ apis:
     tags:
       - Portfolio
       - Wallet
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.1inch.dev/portfolio/portfolio/v4
     humanURL: https://business.1inch.com/portal/documentation/portfolio-api
     description: Portfolio composition, P&L, and historical valuation across supported networks.
@@ -138,7 +138,7 @@ apis:
     tags:
       - Gas
       - Estimation
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.1inch.dev/gas-price/v1.5
     humanURL: https://business.1inch.com/portal/documentation/gas-price-api
     description: Gas price estimates for EIP-1559 across supported EVM chains.
