@@ -151,6 +151,10 @@ apis:
     x-use-cases:
       - Wallet gas-fee preview
 common:
+  - type: DomainSecurity
+    url: security/one-inch-domain-security.yml
+  - type: Authentication
+    url: authentication/one-inch-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/1inch
   - type: Portal
