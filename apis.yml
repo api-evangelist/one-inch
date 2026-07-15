@@ -151,6 +151,8 @@ apis:
     x-use-cases:
       - Wallet gas-fee preview
 common:
+  - type: AgenticAccess
+    url: agentic-access/one-inch-agentic-access.yml
   - type: DomainSecurity
     url: security/one-inch-domain-security.yml
   - type: Authentication
