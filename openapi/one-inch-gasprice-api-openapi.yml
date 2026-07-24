@@ -1,0 +1,60 @@
+openapi: 3.1.0
+info:
+  title: 1inch Developer Portal APIs Balance GasPrice API
+  description: '1inch exposes a suite of REST APIs through its Developer / Business
+
+    portal (https://business.1inch.com/portal/documentation/overview).
+
+    This OpenAPI document covers the most commonly used products surfaced
+
+    in the 1inch apis.yml profile: Swap (classic aggregation), Orderbook
+
+    (limit orders), Balance, Spot Price, Token, Portfolio, and Gas Price.
+
+    All endpoints are versioned under their own subpath on
+
+    `https://api.1inch.dev` and authenticate with a Bearer token issued
+
+    from the developer portal.
+
+    '
+  version: 1.0.0
+  contact:
+    name: 1inch
+    url: https://business.1inch.com/portal/documentation/overview
+servers:
+- url: https://api.1inch.dev
+  description: 1inch Developer API gateway
+security:
+- BearerAuth: []
+tags:
+- name: GasPrice
+paths:
+  /gas-price/v1.5/{chain}:
+    get:
+      tags:
+      - GasPrice
+      summary: Get EIP-1559 gas price estimates
+      parameters:
+      - $ref: '#/components/parameters/Chain'
+      responses:
+        '200':
+          description: Gas price tiers
+components:
+  parameters:
+    Chain:
+      in: path
+      name: chain
+      required: true
+      schema:
+        type: integer
+      description: EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: 'API key issued from https://portal.1inch.dev passed as
+
+        `Authorization: Bearer <token>`.
+
+        '
