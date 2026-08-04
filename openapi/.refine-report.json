@@ -1,0 +1,26 @@
+{
+  "provider": "one-inch",
+  "sources": [
+    "one-inch-balance-api-openapi.yml",
+    "one-inch-gasprice-api-openapi.yml",
+    "one-inch-orderbook-api-openapi.yml",
+    "one-inch-portfolio-api-openapi.yml",
+    "one-inch-spotprice-api-openapi.yml",
+    "one-inch-swap-api-openapi.yml",
+    "one-inch-token-api-openapi.yml"
+  ],
+  "outputs": [
+    "one-inch-balance-api-openapi.yml",
+    "one-inch-gasprice-api-openapi.yml",
+    "one-inch-orderbook-api-openapi.yml",
+    "one-inch-portfolio-api-openapi.yml",
+    "one-inch-spotprice-api-openapi.yml",
+    "one-inch-swap-api-openapi.yml",
+    "one-inch-token-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
