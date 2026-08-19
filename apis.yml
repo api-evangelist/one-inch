@@ -28,7 +28,7 @@ tags:
   - Cross-chain
 created: '2026-05-08'
 modified: '2026-05-08'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 description: >-
   1inch is the leading DEX aggregator. The 1inch Developer Portal exposes 13+ APIs covering
   Swap (classic, Fusion intent, cross-chain), Orderbook, Balance, Spot Price, Token, Token
