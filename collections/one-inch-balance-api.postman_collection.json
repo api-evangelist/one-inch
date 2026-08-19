@@ -1,0 +1,144 @@
+{
+  "item": [
+    {
+      "id": "3e95da62-3063-46fe-a051-f946699d107f",
+      "name": "Balance",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "84a0cf38-556d-4556-83a8-979ead6a2abc",
+          "name": "Get wallet token balances",
+          "request": {
+            "name": "Get wallet token balances",
+            "description": {},
+            "url": {
+              "path": [
+                "balance",
+                "v1.2",
+                ":chain",
+                "balances",
+                ":walletAddress"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "chain",
+                  "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "walletAddress",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a083cb17-044f-4bc6-b8e9-b2ea51e177e1",
+              "name": "Balances keyed by token address",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "balance",
+                    "v1.2",
+                    ":chain",
+                    "balances",
+                    ":walletAddress"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "chain",
+                      "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "walletAddress",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.1inch.dev",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "16e5595b-d414-4fb4-86e5-f82e1b6a5700",
+    "name": "1inch Developer Portal APIs Balance API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "1inch exposes a suite of REST APIs through its Developer / Business\nportal (https://business.1inch.com/portal/documentation/overview).\nThis OpenAPI document covers the most commonly used products surfaced\nin the 1inch apis.yml profile: Swap (classic aggregation), Orderbook\n(limit orders), Balance, Spot Price, Token, Portfolio, and Gas Price.\nAll endpoints are versioned under their own subpath on\n`https://api.1inch.dev` and authenticate with a Bearer token issued\nfrom the developer portal.\n\n\nContact Support:\n Name: 1inch",
+      "type": "text/plain"
+    }
+  }
+}

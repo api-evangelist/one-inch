@@ -1,0 +1,126 @@
+{
+  "item": [
+    {
+      "id": "e035e6e0-6d50-4921-bb8e-1ecefc90d1a2",
+      "name": "Token",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "eb543641-097f-4f93-b749-b9dfa343f2f4",
+          "name": "List tokens with metadata for a chain",
+          "request": {
+            "name": "List tokens with metadata for a chain",
+            "description": {},
+            "url": {
+              "path": [
+                "token",
+                "v1.2",
+                ":chain"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "chain",
+                  "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fda0aaab-41d3-41b3-8f25-3c46d1345efa",
+              "name": "Tokens with metadata",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "token",
+                    "v1.2",
+                    ":chain"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "chain",
+                      "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.1inch.dev",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "65d1e7d4-fe83-49ad-a701-8b16f702647b",
+    "name": "1inch Developer Portal APIs Balance Token API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "1inch exposes a suite of REST APIs through its Developer / Business\nportal (https://business.1inch.com/portal/documentation/overview).\nThis OpenAPI document covers the most commonly used products surfaced\nin the 1inch apis.yml profile: Swap (classic aggregation), Orderbook\n(limit orders), Balance, Spot Price, Token, Portfolio, and Gas Price.\nAll endpoints are versioned under their own subpath on\n`https://api.1inch.dev` and authenticate with a Bearer token issued\nfrom the developer portal.\n\n\nContact Support:\n Name: 1inch",
+      "type": "text/plain"
+    }
+  }
+}

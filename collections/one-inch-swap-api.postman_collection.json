@@ -1,0 +1,918 @@
+{
+  "item": [
+    {
+      "id": "b326b0e3-0720-4cad-8405-4f9008c4c9aa",
+      "name": "Swap",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a7da17b8-114e-4a5e-a658-8af025c200e4",
+          "name": "Swap API health check",
+          "request": {
+            "name": "Swap API health check",
+            "description": {},
+            "url": {
+              "path": [
+                "swap",
+                "v6.0",
+                ":chain",
+                "healthcheck"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "chain",
+                  "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "75af2559-4d72-4eb3-a36f-f2ae22018af9",
+              "name": "API healthy",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swap",
+                    "v6.0",
+                    ":chain",
+                    "healthcheck"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "chain",
+                      "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e7adc391-9e25-486f-8f1f-0bad15de7049",
+          "name": "Get a swap quote",
+          "request": {
+            "name": "Get a swap quote",
+            "description": {
+              "content": "Returns the best aggregated quote for a token swap on the given EVM chain.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "swap",
+                "v6.0",
+                ":chain",
+                "quote"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "src",
+                  "value": "<string>",
+                  "description": "(Required) Source token address"
+                },
+                {
+                  "disabled": false,
+                  "key": "dst",
+                  "value": "<string>",
+                  "description": "(Required) Destination token address"
+                },
+                {
+                  "disabled": false,
+                  "key": "amount",
+                  "value": "<string>",
+                  "description": "(Required) Source amount in minor units (wei)"
+                },
+                {
+                  "disabled": false,
+                  "key": "includeTokensInfo",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "includeProtocols",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "includeGas",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "chain",
+                  "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1da19b9a-145e-4e9c-8a67-2579f25ca285",
+              "name": "Quote",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swap",
+                    "v6.0",
+                    ":chain",
+                    "quote"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "src",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "dst",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "amount",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "includeTokensInfo",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "includeProtocols",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "includeGas",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "chain",
+                      "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e23e1bba-0ffa-4ac9-bc9d-ea9f1b91c925",
+          "name": "Build a swap transaction",
+          "request": {
+            "name": "Build a swap transaction",
+            "description": {},
+            "url": {
+              "path": [
+                "swap",
+                "v6.0",
+                ":chain",
+                "swap"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "src",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "dst",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "amount",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "from",
+                  "value": "<string>",
+                  "description": "(Required) Wallet address that will execute the swap"
+                },
+                {
+                  "disabled": false,
+                  "key": "slippage",
+                  "value": "<number>",
+                  "description": "(Required) Slippage tolerance in percent (e.g. 1 = 1%)"
+                },
+                {
+                  "disabled": false,
+                  "key": "disableEstimate",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "allowPartialFill",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "chain",
+                  "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e21b05f0-7e2f-469e-8ba5-a94389250bfb",
+              "name": "Swap transaction calldata",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swap",
+                    "v6.0",
+                    ":chain",
+                    "swap"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "src",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "dst",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "amount",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "from",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "slippage",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "disableEstimate",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "allowPartialFill",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "chain",
+                      "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d6351bc1-ce23-43bc-9814-6a124a64cedf",
+          "name": "Get aggregator spender address",
+          "request": {
+            "name": "Get aggregator spender address",
+            "description": {},
+            "url": {
+              "path": [
+                "swap",
+                "v6.0",
+                ":chain",
+                "approve",
+                "spender"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "chain",
+                  "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "de455487-d0cd-422b-93ff-8311b7387a84",
+              "name": "Spender address",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swap",
+                    "v6.0",
+                    ":chain",
+                    "approve",
+                    "spender"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "chain",
+                      "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "aaa8c155-77ea-41ea-955d-ce3cf9d2216f",
+          "name": "Build an approve transaction",
+          "request": {
+            "name": "Build an approve transaction",
+            "description": {},
+            "url": {
+              "path": [
+                "swap",
+                "v6.0",
+                ":chain",
+                "approve",
+                "transaction"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "tokenAddress",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "amount",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "chain",
+                  "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a0c37d91-8cb8-43ef-914f-bbd17d64395b",
+              "name": "Approve transaction calldata",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swap",
+                    "v6.0",
+                    ":chain",
+                    "approve",
+                    "transaction"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "tokenAddress",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "amount",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "chain",
+                      "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2f0cd2ec-879a-4abe-a8f8-a4139be88e6f",
+          "name": "Get current token allowance",
+          "request": {
+            "name": "Get current token allowance",
+            "description": {},
+            "url": {
+              "path": [
+                "swap",
+                "v6.0",
+                ":chain",
+                "approve",
+                "allowance"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "tokenAddress",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "walletAddress",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "chain",
+                  "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8ca90c6b-ff74-4cd4-9e15-75fa6239f461",
+              "name": "Allowance amount",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swap",
+                    "v6.0",
+                    ":chain",
+                    "approve",
+                    "allowance"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "tokenAddress",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "walletAddress",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "chain",
+                      "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cb7c6f49-8638-4cf5-9aa5-b6a7a2c64212",
+          "name": "List supported liquidity sources (protocols)",
+          "request": {
+            "name": "List supported liquidity sources (protocols)",
+            "description": {},
+            "url": {
+              "path": [
+                "swap",
+                "v6.0",
+                ":chain",
+                "liquidity-sources"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "chain",
+                  "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dad171e8-27c9-4952-acf7-6ba050149ede",
+              "name": "Liquidity sources",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swap",
+                    "v6.0",
+                    ":chain",
+                    "liquidity-sources"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "chain",
+                      "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "312bde36-de4e-4b06-9fcd-6ab0eca0740d",
+          "name": "List supported tokens for swapping",
+          "request": {
+            "name": "List supported tokens for swapping",
+            "description": {},
+            "url": {
+              "path": [
+                "swap",
+                "v6.0",
+                ":chain",
+                "tokens"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "chain",
+                  "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d21c2143-3e9a-4793-b329-4091c67a5864",
+              "name": "Tokens",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swap",
+                    "v6.0",
+                    ":chain",
+                    "tokens"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "chain",
+                      "description": "(Required) EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.1inch.dev",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "68df3e78-8f0d-4e8c-8511-c0ee6e095d93",
+    "name": "1inch Developer Portal APIs Balance Swap API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "1inch exposes a suite of REST APIs through its Developer / Business\nportal (https://business.1inch.com/portal/documentation/overview).\nThis OpenAPI document covers the most commonly used products surfaced\nin the 1inch apis.yml profile: Swap (classic aggregation), Orderbook\n(limit orders), Balance, Spot Price, Token, Portfolio, and Gas Price.\nAll endpoints are versioned under their own subpath on\n`https://api.1inch.dev` and authenticate with a Bearer token issued\nfrom the developer portal.\n\n\nContact Support:\n Name: 1inch",
+      "type": "text/plain"
+    }
+  }
+}

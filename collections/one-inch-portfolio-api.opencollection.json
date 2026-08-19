@@ -1,0 +1,42 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "1inch Developer Portal APIs Balance Portfolio API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Portfolio",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get current portfolio value across chains",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/portfolio/portfolio/v4/general/current_value",
+            "params": [
+              {
+                "name": "addresses",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Get current portfolio value across chains"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

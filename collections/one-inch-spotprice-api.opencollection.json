@@ -1,0 +1,43 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "1inch Developer Portal APIs Balance SpotPrice API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "SpotPrice",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get spot prices for multiple tokens on a chain",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/price/v1.1/:chain",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              }
+            ]
+          },
+          "docs": "Get spot prices for multiple tokens on a chain"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

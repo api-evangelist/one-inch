@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "1inch Developer Portal APIs Balance API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Balance",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get wallet token balances",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/balance/v1.2/:chain/balances/:walletAddress",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              },
+              {
+                "name": "walletAddress",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get wallet token balances"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

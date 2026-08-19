@@ -1,0 +1,43 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "1inch Developer Portal APIs Balance Token API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Token",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List tokens with metadata for a chain",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/token/v1.2/:chain",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              }
+            ]
+          },
+          "docs": "List tokens with metadata for a chain"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

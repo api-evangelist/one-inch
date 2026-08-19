@@ -1,0 +1,76 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "1inch Developer Portal APIs Balance Orderbook API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Orderbook",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Submit a limit order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.1inch.dev/orderbook/v4.0/:chain/order",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submit a limit order"
+        },
+        {
+          "info": {
+            "name": "List limit orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.1inch.dev/orderbook/v4.0/:chain/orders",
+            "params": [
+              {
+                "name": "chain",
+                "value": "",
+                "type": "path",
+                "description": "EVM chain ID (e.g. 1 for Ethereum, 137 for Polygon)"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List limit orders"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

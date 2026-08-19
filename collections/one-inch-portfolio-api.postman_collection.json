@@ -1,0 +1,136 @@
+{
+  "item": [
+    {
+      "id": "a09cb06d-eead-471f-a2c8-6327858e9a14",
+      "name": "Portfolio",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8d846cf9-3f1c-4a0c-a97f-f5ea0e1370d6",
+          "name": "Get current portfolio value across chains",
+          "request": {
+            "name": "Get current portfolio value across chains",
+            "description": {},
+            "url": {
+              "path": [
+                "portfolio",
+                "portfolio",
+                "v4",
+                "general",
+                "current_value"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "addresses",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "addresses",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9c71c539-75f3-4c90-8d77-6d7492592b37",
+              "name": "Current portfolio value",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "portfolio",
+                    "portfolio",
+                    "v4",
+                    "general",
+                    "current_value"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "addresses",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "addresses",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.1inch.dev",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "e674a2c1-87a8-40ae-9390-125c0cffe664",
+    "name": "1inch Developer Portal APIs Balance Portfolio API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "1inch exposes a suite of REST APIs through its Developer / Business\nportal (https://business.1inch.com/portal/documentation/overview).\nThis OpenAPI document covers the most commonly used products surfaced\nin the 1inch apis.yml profile: Swap (classic aggregation), Orderbook\n(limit orders), Balance, Spot Price, Token, Portfolio, and Gas Price.\nAll endpoints are versioned under their own subpath on\n`https://api.1inch.dev` and authenticate with a Bearer token issued\nfrom the developer portal.\n\n\nContact Support:\n Name: 1inch",
+      "type": "text/plain"
+    }
+  }
+}
