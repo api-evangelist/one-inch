@@ -22,6 +22,16 @@ tags:
   - DEX
   - Aggregator
   - Swap
+  - Multi-Chain
+  - Limit Orders
+  - Fusion
+  - Cross-Chain
+tags_raw:
+  - Web3
+  - DeFi
+  - DEX
+  - Aggregator
+  - Swap
   - Multi-chain
   - Limit Orders
   - Fusion
@@ -38,6 +48,11 @@ apis:
 - aid: one-inch:swap-api
   name: 1inch Swap API
   tags:
+  - Swap
+  - Aggregator
+  - Fusion
+  - Cross-Chain
+  tags_raw:
   - Swap
   - Aggregator
   - Fusion
@@ -62,6 +77,9 @@ apis:
   name: 1inch Orderbook API
   tags:
   - Limit Orders
+  - Order Book
+  tags_raw:
+  - Limit Orders
   - Orderbook
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://api.1inch.dev/orderbook/v4.0
@@ -79,6 +97,9 @@ apis:
 - aid: one-inch:balance-api
   name: 1inch Balance API
   tags:
+  - Balances
+  - Wallets
+  tags_raw:
   - Balances
   - Wallet
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
@@ -134,6 +155,9 @@ apis:
   name: 1inch Portfolio API
   tags:
   - Portfolio
+  - Wallets
+  tags_raw:
+  - Portfolio
   - Wallet
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://api.1inch.dev/portfolio/portfolio/v4
@@ -171,6 +195,8 @@ apis:
   humanURL: https://business.1inch.com/portal/documentation/swap-api
   baseURL: https://api.1inch.dev/swap/v6.0
   tags:
+  - Balances
+  tags_raw:
   - Balance
   properties:
   - type: OpenAPI
@@ -181,6 +207,8 @@ apis:
   humanURL: https://business.1inch.com/portal/documentation/swap-api
   baseURL: https://api.1inch.dev/swap/v6.0
   tags:
+  - Gas Price
+  tags_raw:
   - GasPrice
   properties:
   - type: OpenAPI
@@ -191,6 +219,8 @@ apis:
   humanURL: https://business.1inch.com/portal/documentation/swap-api
   baseURL: https://api.1inch.dev/swap/v6.0
   tags:
+  - Order Book
+  tags_raw:
   - Orderbook
   properties:
   - type: OpenAPI
@@ -211,6 +241,8 @@ apis:
   humanURL: https://business.1inch.com/portal/documentation/swap-api
   baseURL: https://api.1inch.dev/swap/v6.0
   tags:
+  - Spot Price
+  tags_raw:
   - SpotPrice
   properties:
   - type: OpenAPI
