@@ -34,10 +34,10 @@ tags:
   - DEX
   - Aggregator
   - Swap
-  - Multi-chain
+  - Multi-Chain
   - Limit Orders
   - Fusion
-  - Cross-chain
+  - Cross-Chain
 tags_raw:
   - Web3
   - DeFi
@@ -63,7 +63,7 @@ apis:
   - Swap
   - Aggregator
   - Fusion
-  - Cross-chain
+  - Cross-Chain
   tags_raw:
   - Swap
   - Aggregator
@@ -89,7 +89,7 @@ apis:
   name: 1inch Orderbook API
   tags:
   - Limit Orders
-  - Orderbook
+  - Order Book
   tags_raw:
   - Limit Orders
   - Orderbook
@@ -219,7 +219,7 @@ apis:
   humanURL: https://business.1inch.com/portal/documentation/swap-api
   baseURL: https://api.1inch.dev/swap/v6.0
   tags:
-  - GasPrice
+  - Gas Price
   tags_raw:
   - GasPrice
   properties:
@@ -231,7 +231,7 @@ apis:
   humanURL: https://business.1inch.com/portal/documentation/swap-api
   baseURL: https://api.1inch.dev/swap/v6.0
   tags:
-  - Orderbook
+  - Order Book
   tags_raw:
   - Orderbook
   properties:
@@ -253,7 +253,7 @@ apis:
   humanURL: https://business.1inch.com/portal/documentation/swap-api
   baseURL: https://api.1inch.dev/swap/v6.0
   tags:
-  - SpotPrice
+  - Spot Price
   tags_raw:
   - SpotPrice
   properties:
