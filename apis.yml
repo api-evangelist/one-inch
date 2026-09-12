@@ -281,6 +281,8 @@ apis:
   - type: OpenAPI
     url: openapi/one-inch-token-api-openapi.yml
 common:
+  - type: Website
+    url: https://www.1inch.com/
   - type: AgenticAccess
     url: agentic-access/one-inch-agentic-access.yml
   - type: DomainSecurity
