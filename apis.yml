@@ -214,18 +214,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/one-inch-balance-api-openapi.yml
-- aid: one-inch:one-inch-gasprice-api
-  name: 1inch GasPrice API
-  description: The GasPrice API from 1inch — 1 operation(s) for gasprice.
-  humanURL: https://business.1inch.com/portal/documentation/swap-api
-  baseURL: https://api.1inch.dev/swap/v6.0
-  tags:
-  - Gas Price
-  tags_raw:
-  - GasPrice
-  properties:
-  - type: OpenAPI
-    url: openapi/one-inch-gasprice-api-openapi.yml
 - aid: one-inch:one-inch-orderbook-api
   name: 1inch Orderbook API
   description: The Orderbook API from 1inch — 2 operation(s) for orderbook.
@@ -280,6 +268,16 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/one-inch-token-api-openapi.yml
+- aid: one-inch:one-inch-gas-price-api
+  name: 1inch Gas Price API
+  description: The Gas Price API from 1inch — 1 operation(s) for gas price.
+  humanURL: https://business.1inch.com/portal/documentation/swap-api
+  baseURL: https://api.1inch.dev/swap/v6.0
+  tags:
+  - Gas Price
+  properties:
+  - type: OpenAPI
+    url: openapi/one-inch-gas-price-api-openapi.yml
 common:
   - type: Website
     url: https://www.1inch.com/
