@@ -264,6 +264,8 @@ apis:
   humanURL: https://business.1inch.com/portal/documentation/swap-api
   baseURL: https://api.1inch.dev/swap/v6.0
   tags:
+  - Tokens
+  tags_raw:
   - Token
   properties:
   - type: OpenAPI
