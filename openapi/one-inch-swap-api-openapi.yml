@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: 1inch Developer Portal APIs Balance Swap API
+  title: 1inch Developer Portal Swap API
   description: '1inch exposes a suite of REST APIs through its Developer / Business
 
     portal (https://business.1inch.com/portal/documentation/overview).
@@ -15,9 +15,7 @@ info:
 
     `https://api.1inch.dev` and authenticate with a Bearer token issued
 
-    from the developer portal.
-
-    '
+    from the developer portal.'
   version: 1.0.0
   contact:
     name: 1inch
@@ -40,6 +38,8 @@ paths:
       responses:
         '200':
           description: API healthy
+      operationId: getSwapV60ByChainHealthcheck
+      x-operation-id-source: derived
   /swap/v6.0/{chain}/quote:
     get:
       tags:
@@ -81,6 +81,8 @@ paths:
       responses:
         '200':
           description: Quote
+      operationId: getSwapV60ByChainQuote
+      x-operation-id-source: derived
   /swap/v6.0/{chain}/swap:
     get:
       tags:
@@ -126,6 +128,8 @@ paths:
       responses:
         '200':
           description: Swap transaction calldata
+      operationId: getSwapV60ByChainSwap
+      x-operation-id-source: derived
   /swap/v6.0/{chain}/approve/spender:
     get:
       tags:
@@ -136,6 +140,8 @@ paths:
       responses:
         '200':
           description: Spender address
+      operationId: getSwapV60ByChainApproveSpender
+      x-operation-id-source: derived
   /swap/v6.0/{chain}/approve/transaction:
     get:
       tags:
@@ -155,6 +161,8 @@ paths:
       responses:
         '200':
           description: Approve transaction calldata
+      operationId: getSwapV60ByChainApproveTransaction
+      x-operation-id-source: derived
   /swap/v6.0/{chain}/approve/allowance:
     get:
       tags:
@@ -175,6 +183,8 @@ paths:
       responses:
         '200':
           description: Allowance amount
+      operationId: getSwapV60ByChainApproveAllowance
+      x-operation-id-source: derived
   /swap/v6.0/{chain}/liquidity-sources:
     get:
       tags:
@@ -185,6 +195,8 @@ paths:
       responses:
         '200':
           description: Liquidity sources
+      operationId: getSwapV60ByChainLiquiditySources
+      x-operation-id-source: derived
   /swap/v6.0/{chain}/tokens:
     get:
       tags:
@@ -195,6 +207,8 @@ paths:
       responses:
         '200':
           description: Tokens
+      operationId: getSwapV60ByChainTokens
+      x-operation-id-source: derived
 components:
   parameters:
     Chain:

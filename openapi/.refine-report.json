@@ -1,13 +1,7 @@
 {
   "provider": "one-inch",
   "sources": [
-    "one-inch-balance-api-openapi.yml",
-    "one-inch-gasprice-api-openapi.yml",
-    "one-inch-orderbook-api-openapi.yml",
-    "one-inch-portfolio-api-openapi.yml",
-    "one-inch-spotprice-api-openapi.yml",
-    "one-inch-swap-api-openapi.yml",
-    "one-inch-token-api-openapi.yml"
+    "_original/one-inch-openapi.yml"
   ],
   "outputs": [
     "one-inch-balance-api-openapi.yml",
@@ -18,9 +12,24 @@
     "one-inch-swap-api-openapi.yml",
     "one-inch-token-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "one-inch-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "superseded outputs removed: one-inch-gas-price-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 14 total)"
+  ],
+  "skipped": [
+    "one-inch-balance-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "one-inch-gas-price-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "one-inch-orderbook-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "one-inch-portfolio-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "one-inch-spotprice-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "one-inch-swap-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "one-inch-token-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
