@@ -50,7 +50,7 @@ tags_raw:
   - Fusion
   - Cross-chain
 created: '2026-05-08'
-modified: '2026-05-08'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 description: >-
   1inch is the leading DEX aggregator. The 1inch Developer Portal exposes 13+ APIs covering
@@ -281,6 +281,8 @@ apis:
   - type: OpenAPI
     url: openapi/one-inch-gas-price-api-openapi.yml
 common:
+  - url: https://1inch.com/blog
+    type: Blog
   - type: Website
     url: https://www.1inch.com/
   - type: AgenticAccess
