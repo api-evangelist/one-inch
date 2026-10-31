@@ -1,4 +1,4 @@
-# 1inch (one-inch)
+# 1inch
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,168 +66,135 @@
 
 1inch is the leading DEX aggregator. The 1inch Developer Portal exposes 13+ APIs covering Swap (classic, Fusion intent, cross-chain), Orderbook, Balance, Spot Price, Token, Token Details, Portfolio, Gas Price, NFT, Traces, History, Transaction Gateway, Web3 RPC, Charts, and Domains. APIs serve 12+ EVM chains. Authentication via Authorization Bearer header.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/one-inch/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/one-inch/refs/heads/main/apis.yml)
+**Areas:** Web3 · DeFi · Decentralized Exchange · Aggregator · Swap · Multi-Chain · Limit Orders · Fusion · Cross-Chain
 
-## Tags
+## 1inch on APIs.io
 
-- Web3
-- DeFi
-- DEX
-- Aggregator
-- Swap
-- Multi-chain
-- Limit Orders
-- Fusion
-- Cross-chain
+Everything profiled for 1inch is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/one-inch/](https://apis.io/providers/one-inch/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (14)
 
-- **Created:** 2026-05-08
-- **Modified:** 2026-05-08
+- [1inch Swap API](https://apis.io/apis/one-inch/swap-api/) — Quote and swap endpoints supporting classic aggregation, Fusion intent-based swaps, and cross-chain (Fusion+).
+- [1inch Orderbook API](https://apis.io/apis/one-inch/orderbook-api/) — Limit-order placement, query, fill, and cancellation endpoints.
+- [1inch Balance API](https://apis.io/apis/one-inch/balance-api/) — Wallet balance lookup across supported EVM chains.
+- [1inch Spot Price API](https://apis.io/apis/one-inch/spot-price-api/) — On-chain spot price feeds for tokens across supported EVM chains.
+- [1inch Token API](https://apis.io/apis/one-inch/token-api/) — Token metadata and discovery endpoints.
+- [1inch Portfolio API](https://apis.io/apis/one-inch/portfolio-api/) — Portfolio composition, P&L, and historical valuation across supported networks.
+- [1inch Gas Price API](https://apis.io/apis/one-inch/gas-price-api/) — Gas price estimates for EIP-1559 across supported EVM chains.
+- [1inch Balance API](https://apis.io/apis/one-inch/one-inch-balance-api/) — The Balance API from 1inch — 1 operation(s) for balance.
+- [1inch Orderbook API](https://apis.io/apis/one-inch/one-inch-orderbook-api/) — The Orderbook API from 1inch — 2 operation(s) for orderbook.
+- [1inch Portfolio API](https://apis.io/apis/one-inch/one-inch-portfolio-api/) — The Portfolio API from 1inch — 1 operation(s) for portfolio.
+- [1inch SpotPrice API](https://apis.io/apis/one-inch/one-inch-spotprice-api/) — The SpotPrice API from 1inch — 1 operation(s) for spotprice.
+- [1inch Swap API](https://apis.io/apis/one-inch/one-inch-swap-api/) — The Swap API from 1inch — 8 operation(s) for swap.
+- [1inch Token API](https://apis.io/apis/one-inch/one-inch-token-api/) — The Token API from 1inch — 1 operation(s) for token.
+- [1inch Gas Price API](https://apis.io/apis/one-inch/one-inch-gas-price-api/) — The Gas Price API from 1inch — 1 operation(s) for gas price.
 
-## APIs
+### Published properties
 
-### 1inch Swap API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Quote and swap endpoints supporting classic aggregation, Fusion intent-based swaps, and cross-chain (Fusion+).
+#### Agentic access (1)
 
-- **Human URL:** [https://business.1inch.com/portal/documentation/swap-api](https://business.1inch.com/portal/documentation/swap-api)
-- **Base URL:** `https://api.1inch.dev/swap/v6.0`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [One Inch Agentic Access](https://apis.io/agentic-access/one-inch/one-inch-agentic-access/)
 
-- Swap
-- Aggregator
-- Fusion
-- Cross-chain
+#### Collections (8)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://business.1inch.com/portal/documentation/swap-api)
-- [Postman Collection](collections/one-inch.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/one-inch.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [1inch Developer Portal APIs](https://apis.io/collections/one-inch/open-one-inch/)
+- [1inch Developer Portal APIs Balance API](https://apis.io/collections/one-inch/open-one-inch-balance-api/)
+- [1inch Developer Portal APIs Balance GasPrice API](https://apis.io/collections/one-inch/open-one-inch-gasprice-api/)
+- [1inch Developer Portal APIs Balance Orderbook API](https://apis.io/collections/one-inch/open-one-inch-orderbook-api/)
+- [1inch Developer Portal APIs Balance Portfolio API](https://apis.io/collections/one-inch/open-one-inch-portfolio-api/)
+- [1inch Developer Portal APIs Balance SpotPrice API](https://apis.io/collections/one-inch/open-one-inch-spotprice-api/)
+- [1inch Developer Portal APIs Balance Swap API](https://apis.io/collections/one-inch/open-one-inch-swap-api/)
+- [1inch Developer Portal APIs Balance Token API](https://apis.io/collections/one-inch/open-one-inch-token-api/)
 
-### 1inch Orderbook API
+#### Security (2)
 
-Limit-order placement, query, fill, and cancellation endpoints.
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Human URL:** [https://business.1inch.com/portal/documentation/orderbook-api](https://business.1inch.com/portal/documentation/orderbook-api)
-- **Base URL:** `https://api.1inch.dev/orderbook/v4.0`
+- [One Inch Authentication](https://apis.io/security/one-inch/one-inch-authentication/)
+- [One Inch Domain Security](https://apis.io/security/one-inch/one-inch-domain-security/)
 
-#### Tags
+#### Plans and pricing (1)
 
-- Limit Orders
-- Orderbook
+Published plans, tiers and prices.
 
-#### Properties
+- [One Inch Plans Pricing](https://apis.io/plans/one-inch/one-inch-plans-pricing/)
 
-- [Documentation](https://business.1inch.com/portal/documentation/orderbook-api)
-- [Postman Collection](collections/one-inch.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/one-inch.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Rate limits (1)
 
-### 1inch Balance API
+Published request limits.
 
-Wallet balance lookup across supported EVM chains.
+- [One Inch Rate Limits](https://apis.io/rate-limits/one-inch/one-inch-rate-limits/)
 
-- **Human URL:** [https://business.1inch.com/portal/documentation/balance-api](https://business.1inch.com/portal/documentation/balance-api)
-- **Base URL:** `https://api.1inch.dev/balance/v1.2`
+#### FinOps (1)
 
-#### Tags
+What the API costs to run, by operation.
 
-- Balances
-- Wallet
+- [One Inch Finops](https://apis.io/finops/one-inch/one-inch-finops/)
 
-#### Properties
+## Where to find this API
 
-- [Documentation](https://business.1inch.com/portal/documentation/balance-api)
-- [Postman Collection](collections/one-inch.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/one-inch.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-### 1inch Spot Price API
-
-On-chain spot price feeds for tokens across supported EVM chains.
-
-- **Human URL:** [https://business.1inch.com/portal/documentation/spot-price-api](https://business.1inch.com/portal/documentation/spot-price-api)
-- **Base URL:** `https://api.1inch.dev/price/v1.1`
-
-#### Tags
-
-- Prices
-- Spot
-
-#### Properties
-
-- [Documentation](https://business.1inch.com/portal/documentation/spot-price-api)
-- [Postman Collection](collections/one-inch.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/one-inch.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### 1inch Token API
-
-Token metadata and discovery endpoints.
-
-- **Human URL:** [https://business.1inch.com/portal/documentation/token-api](https://business.1inch.com/portal/documentation/token-api)
-- **Base URL:** `https://api.1inch.dev/token/v1.2`
-
-#### Tags
-
-- Tokens
-- Metadata
-
-#### Properties
-
-- [Documentation](https://business.1inch.com/portal/documentation/token-api)
-- [Postman Collection](collections/one-inch.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/one-inch.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### 1inch Portfolio API
-
-Portfolio composition, P&L, and historical valuation across supported networks.
-
-- **Human URL:** [https://business.1inch.com/portal/documentation/portfolio-api](https://business.1inch.com/portal/documentation/portfolio-api)
-- **Base URL:** `https://api.1inch.dev/portfolio/portfolio/v4`
-
-#### Tags
-
-- Portfolio
-- Wallet
-
-#### Properties
-
-- [Documentation](https://business.1inch.com/portal/documentation/portfolio-api)
-- [Postman Collection](collections/one-inch.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/one-inch.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### 1inch Gas Price API
-
-Gas price estimates for EIP-1559 across supported EVM chains.
-
-- **Human URL:** [https://business.1inch.com/portal/documentation/gas-price-api](https://business.1inch.com/portal/documentation/gas-price-api)
-- **Base URL:** `https://api.1inch.dev/gas-price/v1.5`
-
-#### Tags
-
-- Gas
-- Estimation
-
-#### Properties
-
-- [Documentation](https://business.1inch.com/portal/documentation/gas-price-api)
-- [Postman Collection](collections/one-inch.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/one-inch.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/1inch)
-- [Portal](https://business.1inch.com/)
+- [Website](https://www.1inch.com/)
 - [Documentation](https://business.1inch.com/portal/documentation/overview)
 - [Pricing](https://business.1inch.com/pricing)
-- [Git Hub](https://github.com/1inch)
-- [Plans](plans/one-inch-plans-pricing.yml)
-- [Rate Limits](rate-limits/one-inch-rate-limits.yml)
-- [Fin Ops](finops/one-inch-finops.yml)
-- [L L Ms Txt](https://1inch.com/llms.txt)
+- [Blog](https://1inch.com/blog)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 27.3** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 45.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 33.3 |
+| Access clarity | 7.9 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/one-inch/](https://apis.io/providers/one-inch/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for 1inch: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/one-inch/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
